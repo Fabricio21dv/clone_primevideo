@@ -1,0 +1,38 @@
+@use 'hero';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$corDeFundo: #00050d;
+$corTextoPrincipal: #FFFFFF;
+$corTextoSecundario: #aaa;
+
+body {
+    background-color: $corDeFundo;
+}
+
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+    color: $corTextoPrincipal;
+}
+
+.text--big {
+    @include text(20px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(16px)
+}
+
+.link-text {
+    @include text(16px);
+    color: $corTextoPrincipal;
+    text-decoration: underline;
+}
