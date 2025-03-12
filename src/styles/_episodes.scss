@@ -1,0 +1,151 @@
+@use 'variaveis';
+
+.episodes {
+    &__container {
+        margin: 24px 24px;
+    }
+
+    &__tabs {
+        display: flex;
+        margin-left: 44px;
+
+        &__button {
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            line-height: 1.5;
+            border: none;
+            padding-bottom: 10px;
+            background: none;
+            font-weight: bold;
+            margin-bottom: 44px;
+            margin: 1vw;
+            cursor: pointer;
+            transition: color 0.5 ease;
+
+            &:hover {
+                color: variaveis.$corTextoPrincipal;
+            }
+
+            &--is-active {
+                border-bottom: 3px solid variaveis.$corTextoPrincipal;
+                color: variaveis.$corTextoPrincipal;
+            }
+        }
+    }
+}
+
+.episode {
+    display: flex;
+    color: variaveis.$corTextoPrincipal;
+    padding: 12px;
+    border-radius: 8px;
+    align-items: flex-start;
+    position: relative;
+    transition: background 0.3s ease;
+    margin-left: 16px;
+    margin-right: 16px;
+
+
+    &:hover {
+        background: #1c1c1e;
+    }
+
+    &:hover .episode__play-button {
+        opacity: 1;
+    }
+
+    &__image {
+        width: 300px;
+        height: 170px;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+
+    &__play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease; 
+    }
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    &__content {
+        flex: 1;
+        padding-left: 24px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &__info {
+        padding-top: 12px;
+        font-size: 16px;
+        color: variaveis.$corTextoPrincipal;
+    }
+
+    &__description {
+        font-size: 16px;
+        color: variaveis.$corTextoSecundario;
+        margin-top: 12px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    &__included {
+        font-size: 16px;
+        margin-top: 12px;
+        color: variaveis.$corTextoPrincipal;
+        font-weight: bold;
+        line-height: 28px;
+        margin-bottom: -5px;
+
+        img {
+            width: 28px;
+            vertical-align: middle;
+        }
+    }
+
+    &__download {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+
+        img {
+            width: 36px;
+            &:hover {
+                transform: scale(1.2);
+                transition: 0.3s ease;
+            }
+        }
+
+    }
+}

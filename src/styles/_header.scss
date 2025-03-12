@@ -1,0 +1,110 @@
+@use 'variaveis';
+
+.header {
+    background-color: #0f171e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 12px 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding: 0 22px;
+    }
+
+    &__logo {
+        img {
+            height: 20px;
+        }
+    }
+
+    &__nav {
+        &__links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-left: 50px;
+
+                a {
+                    color: variaveis.$corTextoPrincipal;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 8px;
+                    border-radius: 5px;
+                    
+                    &:hover {
+                        color: #000;
+                        background-color: #ffffff;
+                        transition: 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    &__divider {
+        img {
+            height: 24px;
+            margin: 0 10px;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        margin-left: 30px;
+
+        li {
+            margin-left: 12px;
+            list-style: none;
+            a {
+                img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &__actions {
+
+        &__links {
+            display: inline-flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            margin-bottom: 8px;
+            padding: 0;
+
+            img {
+                height: 24px;
+                margin-right: 8px;
+            }
+
+            li {
+                margin-left: 20px;
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    transition: color 0.3s ease;
+
+                    img {
+                        height: 32px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

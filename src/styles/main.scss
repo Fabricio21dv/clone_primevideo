@@ -1,22 +1,35 @@
+@use 'variaveis';
 @use 'hero';
+@use 'episodes';
+@use 'footer';
+@use 'header';
+
+@font-face {
+    font-family: Amazon;
+    src: url(../../assets/fonts/Amazon-Ember.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Amazon;
+    src: url(../../assets/fonts/Amazon-Ember-Bold.ttf);
+    font-weight: 700;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Amazon, sans-serif;
 }
 
-$corDeFundo: #00050d;
-$corTextoPrincipal: #FFFFFF;
-$corTextoSecundario: #aaa;
-
 body {
-    background-color: $corDeFundo;
+    background-color: variaveis.$corDeFundo;
 }
 
 @mixin text($fontSize: 18px) {
     font-size: $fontSize;
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 .text--big {
@@ -33,6 +46,6 @@ body {
 
 .link-text {
     @include text(16px);
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
     text-decoration: underline;
 }
